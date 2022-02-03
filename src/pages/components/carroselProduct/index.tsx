@@ -1,7 +1,7 @@
 import { DescriptionTitle } from "./description";
 import { Product } from "./carrosel";
 import { Container } from "./style";
-import { product } from "../../api/product";
+
 
 
 

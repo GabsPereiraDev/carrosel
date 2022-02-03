@@ -1,17 +1,16 @@
 import { Container} from "./style";
 import { ProductCard } from "./ProductCard";
-import { ButtonUI } from "../../../ui/button";
-import { AiOutlineArrowLeft,AiOutlineArrowRight } from "react-icons/ai";
 import { TransactionCard } from "./TransactionCard";
 import { useEffect, useState } from "react";
-import { product } from "../../../api/product";
+import { useWindowSize } from './../../../../hooks/useWindowSize';
+
 
 
 
 
 export function Product() {
 
-    
+    const {width, height} = useWindowSize()
 
 
     const [count, setCount] = useState<number>(0)
@@ -22,7 +21,24 @@ export function Product() {
    useEffect(()=>{
 
     const handleClickright = () => {
-        setCount(-32 * numberTransaction)
+        
+        if(width>= 1367){
+            setCount(-540 * numberTransaction)
+        }
+         else if(width> 850 && width<=950){
+            setCount(-570 * numberTransaction)
+        }else if (width<= 850 && width>450){
+            setCount(-535 * numberTransaction)
+        }else if (width<= 450 && width>390){
+            setCount(-425 * numberTransaction)
+        }else if (width<=390){
+            setCount(-365 * numberTransaction)
+        }else{
+            setCount(-512 * numberTransaction)
+        }
+        
+
+
     }
 
     handleClickright()

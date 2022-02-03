@@ -6,7 +6,7 @@ flex-direction:column;
 align-items:center;
 
 article{
-    width:95vw;
+    width:94vw;
 display: flex;
 flex-direction:row;
 align-items: center;
@@ -20,6 +20,14 @@ overflow: hidden;
     display: flex;
     justify-content:space-between;
 }
+@media (max-width:1000px){
+
+    article{
+        width:100vw;
+    }
+
+}
+
 
 `
 

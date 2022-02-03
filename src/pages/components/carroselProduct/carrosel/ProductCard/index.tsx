@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
 import { product } from "../../../../product"
 
 import { ButtonUI } from "../../../../ui/button"
 import { AvaliateProduct } from "./avaliate"
+import { ContainerIcons } from "./header/containerIcons"
 import { ImageProduct } from "./header/image"
 import { PromotionProduct } from "./header/promotion"
 import { MarkProduct } from "./main/mark"
@@ -19,7 +20,7 @@ interface IProductCard{
 
 export function ProductCard({count}:IProductCard) {
 
-   
+    
 
 
     return (
@@ -32,6 +33,7 @@ export function ProductCard({count}:IProductCard) {
                         <header>
                             <ImageProduct url={item.url} />
                             <PromotionProduct promotion="17%" />
+                            <ContainerIcons/>
                         </header>
                         <main>
                             <MarkProduct mark={item.mark} />
